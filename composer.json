@@ -1,0 +1,44 @@
+{
+    "name": "fghazaleh/factory-bundle",
+    "description": "Symfony data fixture (Laravel Factory with faker)",
+    "type": "symfony-bundle",
+    "keywords": ["Persistence", "Fixture", "Factory", "Faker", "Laravel Factory"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Franco Ghazaleh",
+            "email": "franco.ghazaleh@gmail.com",
+            "homepage": "https://ghazaleh.co/",
+            "role": "maintainer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "fzaninotto/faker": "^1.9",
+        "doctrine/doctrine-fixtures-bundle": "^3.3",
+        "symfony/console": "^3.4|^4.3|^5.0",
+        "symfony/dependency-injection": "^3.4|^4.3|^5.0",
+        "symfony/doctrine-bridge": "^3.4|^4.1|^5.0",
+        "symfony/http-kernel": "^3.4|^4.3|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FG\\Bundle\\FactoryBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FG\\Bundle\\Tests\\FactoryBundle\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3",
+        "phpunit/phpunit": "^8.5",
+        "symfony/var-dumper": "^5.0"
+    },
+    "scripts": {
+        "coverage": "vendor/bin/phpunit --coverage-html ./coverage && open ./coverage/index.html"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
